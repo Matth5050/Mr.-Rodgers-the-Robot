@@ -1,15 +1,5 @@
-function beepBoop(input) {
-  let sum = -1;
-  let newArray = [];
-  for (i = -1; i < input; i++) {
-    
-    newArray.push(sum += 1)
-  }
-  return(newArray);
-}
-
-function numToSpeech() {
-  let testArray = [0,1,2,3,4,5,6,7,8,9,10];
+function numToSpeech(inputArray) {
+  let testArray = inputArray;
   let outputArray = [];
   testArray.forEach(function(element) {
     let num = element.toString();
@@ -26,4 +16,17 @@ function numToSpeech() {
   console.log(outputArray.reverse());
 };
 
-numToSpeech();
+function beepBoop(input) {
+  let sum = -1;
+  let newArray = [];
+  for (i = -1; i < input; i++) {
+    
+    newArray.push(sum += 1)
+  }
+  return(numToSpeech(newArray));
+}
+
+
+
+
+
