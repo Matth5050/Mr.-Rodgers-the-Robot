@@ -12,19 +12,23 @@
 </head>
 <body>
   <div class="container">
-  <h1>Mr.Rodgers the Robot!</h1>
-  <div class="form-group">
+  <h1 class="header">Mr. Rodgers the Robot!</h1>
     <form id="form" type="text">
-      <input placeholder="Please tell Mr.Rodgers the Robot your name" id="nameInput" class="form-control" type="text">
-      <input placeholder="Please give Mr.Rodgers the Robot a number to analyze" id="input1" class="form-control" type="text">
+      <div class="row">
+        <div class="col">
+         <input placeholder="Please tell Mr. Rodgers the Robot your name" id="nameInput" class="form-control" type="text">
+        </div>
+        <div class="col">
+          <input placeholder="Please give Mr. Rodgers the Robot a number to analyze" id="input1" class="form-control" type="text">
+        </div>
+      </div>
       <button type="submit" id="btn" class="btn-primary">Press for analysis!</button>
+      <button type="click" id="btn2" class="btn-primary">Press for <em>reverse </em>analysis!</button>
     </form>
-    <button type="submit" id="btn2" class="btn-primary">Press for <em>reverse </em>analysis!</button>
     <div>
       <p class="numOutput"></p>
       <p class="revNumOutput"></p>
     </div>
-  </div>
 </div>
 </body>
 </html>
