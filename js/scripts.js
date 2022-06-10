@@ -1,19 +1,21 @@
+// Business Logic
+
 function numToSpeech(inputArray) {
   let testArray = inputArray;
   let outputArray = [];
   testArray.forEach(function(element) {
     let num = element.toString();
     if (num.includes(3)) {
-      outputArray.unshift("Won't you be my neighbor?")
+      outputArray.push('"Won\'t you be my neighbor?"')
     } else if (num.includes(2)) {
-      outputArray.unshift("Boop!")
+      outputArray.push('"Boop!"')
     } else if (num.includes(1)) {
-      outputArray.unshift("Beep!")
+      outputArray.push('"Beep!"')
     } else {
-      outputArray.unshift(num)
+      outputArray.push(num)
     }
   });
-  return outputArray.reverse();
+  return outputArray.join(', ');
 };
 
 function beepBoop(input) {
@@ -23,10 +25,19 @@ function beepBoop(input) {
     
     newArray.push(sum += 1)
   }
-  console.log(numToSpeech(newArray));
+  return numToSpeech(newArray);
 }
 
+// UI Logic
 
+$(document).ready(function() {
+  $('form#form').submit(function(event) {
+    event.preventDefault();
+    console.log('ehy');
+    const numInput = $('#input1').val();
+    $('.numOutput').text(beepBoop(numInput));
+  })
+})
 
 
 
