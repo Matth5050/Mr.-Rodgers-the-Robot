@@ -13,7 +13,7 @@ function numToSpeech(inputArray) {
       outputArray.unshift(num)
     }
   });
-  console.log(outputArray.reverse());
+  return outputArray.reverse();
 };
 
 function beepBoop(input) {
@@ -23,7 +23,7 @@ function beepBoop(input) {
     
     newArray.push(sum += 1)
   }
-  return(numToSpeech(newArray));
+  console.log(numToSpeech(newArray));
 }
 
 
