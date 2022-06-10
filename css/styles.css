@@ -8,6 +8,7 @@ body {
 
 .header {
   text-align: center;
+  margin-bottom: 20px;
 }
 #buttons {
   margin: 40px;
@@ -19,9 +20,18 @@ body {
 }
 
 #btn, #btn2 {
+  background: linear-gradient(to right, rgba(224, 36, 36, 0.55), rgba(92, 109, 240, 0.55));
+  border-color: transparent;
+}
 
+#btn:hover, #btn2:hover {
+  box-shadow: 2px 2px;
 }
 
 .revNumOutput, .numOutput {
   text-align: center;
+  font-size: 30px;
+  background: linear-gradient(to right, rgba(97, 76, 76, 1), rgba(151, 92, 240, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

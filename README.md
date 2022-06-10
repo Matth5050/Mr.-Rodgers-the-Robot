@@ -1,4 +1,4 @@
-# Mr Rodgers the Robot
+# Mr. Rodgers the Robot
 
 ## View the page [here](https://matth5050.github.io/Programming-Language-Selector/)
 
