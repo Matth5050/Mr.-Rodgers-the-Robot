@@ -22,7 +22,6 @@ function beepBoop(input) {
   let sum = -1;
   let newArray = [];
   for (i = -1; i < input; i++) {
-    
     newArray.push(sum += 1)
   }
   return numToSpeech(newArray);
@@ -31,7 +30,6 @@ function revBeepBoop(input) {
   let sum = -1;
   let newArray = [];
   for (i = -1; i < input; i++) {
-    
     newArray.push(sum += 1)
   }
   return numToSpeech(newArray.reverse());
@@ -42,8 +40,7 @@ function revBeepBoop(input) {
 $(document).ready(function() {
   $('button#btn2').click(function(event) {
     event.preventDefault();
-    const numInput = $('#input1').val();
-    $('.revNumOutput').text(revBeepBoop(numInput));
+    $('.revNumOutput').show();
     
   })
   
@@ -51,10 +48,10 @@ $(document).ready(function() {
     event.preventDefault();
     const numInput = $('#input1').val();
     $('.numOutput').text(beepBoop(numInput));
+    $('.revNumOutput').text(revBeepBoop(numInput));
+    $('.revNumOutput').hide();
     $('form#form')[0].reset();
-    
   })
-  
 })
 
 
