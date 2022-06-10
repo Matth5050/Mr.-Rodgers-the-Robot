@@ -1,26 +1,15 @@
-// Utility Logic
+
+
+
+const negitiveText = "Mr. Rodgers the Robot doesn't like Negativity"
+// Business Logic
+
 function filter() {
   const name = $('input#nameInput').val();
   if ( isNaN(name) === true) {
     return true
   }
 }
-
-const negitiveText = "Mr. Rodgers the Robot doesn't like Negativity"
-
-
-// function numFilter() {
-//   const num = $('input#input1').val();
-//   if (Number(num) === true && !num.includes('-')) {
-//     return true;
-// } else if (Number(num) === true && num.includes('-')) {
-//     return "Mr. Rodgers the Robot doesn't like negativity!"
-// } else {
-//   return false;
-// }
-// }
-
-// Business Logic
 
 function numToSpeech(inputArray) {
   let testArray = inputArray;
@@ -29,7 +18,7 @@ function numToSpeech(inputArray) {
   testArray.forEach(function(element) {
     let num = element.toString();
     if (num.includes(3) && filter() === true) {
-      outputArray.push('"Won\'t you be my neighbor, ' + name + ' ?')
+      outputArray.push('"Won\'t you be my neighbor, ' + name + '?')
     } else if (num.includes(3)) {
       outputArray.push('"Won\'t you be my neighbor?"')
     } else if (num.includes(2)) {

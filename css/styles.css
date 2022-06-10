@@ -1,7 +1,27 @@
+body {
+  background: linear-gradient(to right, rgba(224, 36, 36, 0.55), rgba(92, 109, 240, 0.55));
+}
+
 .revNumOutput {
   display: none;
 }
 
 .header {
+  text-align: center;
+}
+#buttons {
+  margin: 40px;
+  text-align: center;
+}
+
+#btn {
+  margin-bottom: 20px;
+}
+
+#btn, #btn2 {
+
+}
+
+.revNumOutput, .numOutput {
   text-align: center;
 }
