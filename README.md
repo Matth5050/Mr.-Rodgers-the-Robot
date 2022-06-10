@@ -1,8 +1,8 @@
-# Programming Language Selector
+# Mr Rodgers the Robot
 
 ## View the page [here](https://matth5050.github.io/Programming-Language-Selector/)
 
-#### If you are unsure of what language to learn, use this site and the crystal ball will help you choose!
+#### Mr. Rodgers the Robot loves to analyze numbers and return interesting results (especially if the number has a 1, 2, or 3)!
 
 ## Technologies Used
 
