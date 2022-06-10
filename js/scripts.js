@@ -1,5 +1,13 @@
 // Business Logic
 
+function nameFilter(userInputs) {
+  const name = $('input#nameInput').val();
+  if ( isNaN(name) === true) {
+    return true;
+  }
+}
+
+
 function numToSpeech(inputArray) {
   let testArray = inputArray;
   let outputArray = [];
