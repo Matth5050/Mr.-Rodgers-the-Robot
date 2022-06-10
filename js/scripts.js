@@ -1,5 +1,4 @@
 // Utility Logic
-
 function filter() {
   const name = $('input#nameInput').val();
   if ( isNaN(name) === true) {
@@ -7,16 +6,19 @@ function filter() {
   }
 }
 
-function numFilter() {
-  const num = $('input#input1').val();
-  if (Number(num) === true && !num.includes('-')) {
-    return true;
-} else if (Number(num) === true && num.includes('-')) {
-    return "Mr. Rodgers the Robot doesn't like negativity!"
-} else {
-  return false;
-}
-}
+const negitiveText = "Mr. Rodgers the Robot doesn't like Negativity"
+
+
+// function numFilter() {
+//   const num = $('input#input1').val();
+//   if (Number(num) === true && !num.includes('-')) {
+//     return true;
+// } else if (Number(num) === true && num.includes('-')) {
+//     return "Mr. Rodgers the Robot doesn't like negativity!"
+// } else {
+//   return false;
+// }
+// }
 
 // Business Logic
 
@@ -42,6 +44,9 @@ function numToSpeech(inputArray) {
 };
 
 function beepBoop(input) {
+  if (input.includes('-') === true) {
+    $('.numOutput').text(negitiveText);
+  } else{
   let sum = -1;
   let newArray = [];
   for (i = -1; i < input; i++) {
@@ -49,7 +54,12 @@ function beepBoop(input) {
   }
   return numToSpeech(newArray);
 }
+}
+
 function revBeepBoop(input) {
+  if (input.includes('-') === true) {
+    $('.revNumOutput').text(negitiveText);
+  } else{
   let sum = -1;
   let newArray = [];
   for (i = -1; i < input; i++) {
@@ -57,7 +67,7 @@ function revBeepBoop(input) {
   }
   return numToSpeech(newArray.reverse());
 }
-
+}
 // UI Logic
 
 $(document).ready(function() {
