@@ -1,19 +1,34 @@
-// Business Logic
+// Utility Logic
 
-function nameFilter(userInputs) {
+function filter() {
   const name = $('input#nameInput').val();
   if ( isNaN(name) === true) {
-    return true;
+    return true
   }
 }
 
+function numFilter() {
+  const num = $('input#input1').val();
+  if (Number(num) === true && !num.includes('-')) {
+    return true;
+} else if (Number(num) === true && num.includes('-')) {
+    return "Mr. Rodgers the Robot doesn't like negativity!"
+} else {
+  return false;
+}
+}
+
+// Business Logic
 
 function numToSpeech(inputArray) {
   let testArray = inputArray;
   let outputArray = [];
+  const name = $('input#nameInput').val();
   testArray.forEach(function(element) {
     let num = element.toString();
-    if (num.includes(3)) {
+    if (num.includes(3) && filter() === true) {
+      outputArray.push('"Won\'t you be my neighbor, ' + name + ' ?')
+    } else if (num.includes(3)) {
       outputArray.push('"Won\'t you be my neighbor?"')
     } else if (num.includes(2)) {
       outputArray.push('"Boop!"')
@@ -49,7 +64,6 @@ $(document).ready(function() {
   $('button#btn2').click(function(event) {
     event.preventDefault();
     $('.revNumOutput').show();
-    
   })
   
   $('form#form').submit(function(event) {
