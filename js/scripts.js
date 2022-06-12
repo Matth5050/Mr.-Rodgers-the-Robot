@@ -1,6 +1,3 @@
-
-
-
 const negitiveText = "Mr. Rodgers the Robot doesn't like Negativity"
 // Business Logic
 
@@ -30,7 +27,7 @@ function numToSpeech(inputArray) {
     }
   });
   return outputArray.join(', ');
-};
+}
 
 function beepBoop(input) {
   if (input.includes('-') === true) {
@@ -42,7 +39,7 @@ function beepBoop(input) {
     newArray.push(sum += 1)
   }
   return numToSpeech(newArray);
-}
+  }
 }
 
 function revBeepBoop(input) {
@@ -55,7 +52,7 @@ function revBeepBoop(input) {
     newArray.push(sum += 1)
   }
   return numToSpeech(newArray.reverse());
-}
+  }
 }
 // UI Logic
 
